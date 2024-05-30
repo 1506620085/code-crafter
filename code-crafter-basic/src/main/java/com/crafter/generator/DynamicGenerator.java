@@ -1,6 +1,6 @@
-package com.tailored.generator;
+package com.crafter.generator;
 
-import com.tailored.model.MainTemplateConfig;
+import com.crafter.model.MainTemplateConfig;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;

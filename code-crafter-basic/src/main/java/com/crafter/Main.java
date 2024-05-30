@@ -1,6 +1,6 @@
-package com.tailored;
+package com.crafter;
 
-import com.tailored.cli.CommandExecutor;
+import com.crafter.cli.CommandExecutor;
 
 public class Main {
     public static void main(String[] args) {

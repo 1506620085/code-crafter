@@ -1,9 +1,9 @@
-package com.tailored.cli;
+package com.crafter.cli;
 
 
-import com.tailored.cli.command.ConfigCommand;
-import com.tailored.cli.command.GenerateCommand;
-import com.tailored.cli.command.ListCommand;
+import com.crafter.cli.command.ConfigCommand;
+import com.crafter.cli.command.GenerateCommand;
+import com.crafter.cli.command.ListCommand;
 import picocli.CommandLine;
 
 @CommandLine.Command(name = "crafter", mixinStandardHelpOptions = true)

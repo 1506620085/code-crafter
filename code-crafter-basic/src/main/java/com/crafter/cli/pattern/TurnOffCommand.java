@@ -1,6 +1,4 @@
-package com.tailored.cli.pattern;
-
-import cn.hutool.core.io.file.visitor.DelVisitor;
+package com.crafter.cli.pattern;
 
 public class TurnOffCommand implements Command{
 

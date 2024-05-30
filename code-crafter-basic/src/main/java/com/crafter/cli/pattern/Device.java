@@ -1,4 +1,4 @@
-package com.tailored.cli.pattern;
+package com.crafter.cli.pattern;
 
 public class Device {
 

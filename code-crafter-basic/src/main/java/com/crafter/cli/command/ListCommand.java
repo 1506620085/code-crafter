@@ -1,11 +1,10 @@
-package com.tailored.cli.command;
+package com.crafter.cli.command;
 
 import cn.hutool.core.io.FileUtil;
 import picocli.CommandLine;
 
 import java.io.File;
 import java.util.List;
-import java.util.concurrent.Callable;
 
 /**
  * list 子命令

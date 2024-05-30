@@ -1,4 +1,4 @@
-package com.tailored.cli.example;
+package com.crafter.cli.example;
 
 import picocli.CommandLine;
 

@@ -1,7 +1,7 @@
-package com.tailored.cli.command;
+package com.crafter.cli.command;
 
 import cn.hutool.core.util.ReflectUtil;
-import com.tailored.model.MainTemplateConfig;
+import com.crafter.model.MainTemplateConfig;
 import picocli.CommandLine;
 
 import java.lang.reflect.Field;

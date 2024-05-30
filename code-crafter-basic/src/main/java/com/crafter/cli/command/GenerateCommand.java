@@ -1,8 +1,8 @@
-package com.tailored.cli.command;
+package com.crafter.cli.command;
 
 import cn.hutool.core.bean.BeanUtil;
-import com.tailored.generator.MainGenerator;
-import com.tailored.model.MainTemplateConfig;
+import com.crafter.generator.MainGenerator;
+import com.crafter.model.MainTemplateConfig;
 import lombok.Data;
 import picocli.CommandLine;
 
