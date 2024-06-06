@@ -1,4 +1,4 @@
-package com.crafter.generator;
+package com.crafter.maker.generator;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.ArrayUtil;
 

@@ -1,6 +1,6 @@
-package com.crafter.generator;
+package com.crafter.maker.generator;
 
-import com.crafter.model.MainTemplateConfig;
+import com.crafter.maker.model.MainTemplateConfig;
 import freemarker.template.TemplateException;
 
 import java.io.File;

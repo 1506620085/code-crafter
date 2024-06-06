@@ -1,4 +1,4 @@
-package com.crafter.model;
+package com.crafter.maker.model;
 
 import lombok.Data;
 
