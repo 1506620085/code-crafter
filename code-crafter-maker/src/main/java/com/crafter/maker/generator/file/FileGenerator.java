@@ -1,15 +1,18 @@
-package com.crafter.maker.generator;
+package com.crafter.maker.generator.file;
 
-import com.crafter.maker.model.MainTemplateConfig;
+import com.crafter.maker.model.DataModel;
 import freemarker.template.TemplateException;
 
 import java.io.File;
 import java.io.IOException;
 
-public class MainGenerator {
+/**
+ * 静态文件生成
+ */
+public class FileGenerator {
 
     public static void main(String[] args) throws TemplateException, IOException {
-        MainTemplateConfig mainTemplateConfig = new MainTemplateConfig();
+        DataModel mainTemplateConfig = new DataModel();
         mainTemplateConfig.setAuthor("Hangzzz");
         mainTemplateConfig.setLoop(false);
         mainTemplateConfig.setOutputText("求和结果123：");
@@ -21,10 +24,10 @@ public class MainGenerator {
         File parentFile  = new File(projectPath).getParentFile();
         String inputPath = parentFile.getAbsolutePath() + File.separator + "code-crafter-demo-projects/acm-template";
         String outputPath = projectPath;
-        StaticGenerator.copyFilesByRecursive(inputPath,outputPath);
+        StaticFileGenerator.copyFilesByHutool(inputPath,outputPath);
         // 生成动态文件
         String inputDynamicFilePath = projectPath + File.separator + "src/main/resources/templates/MainTemplate.java.ftl";
         String outputDynamicFilePath = outputPath + File.separator + "acm-template/src/com/crafter/acm/MainTemplate.java";
-        DynamicGenerator.doGenerate(inputDynamicFilePath,outputDynamicFilePath,model);
+        DynamicFileGenerator.doGenerate(inputDynamicFilePath,outputDynamicFilePath,model);
     }
 }

@@ -1,6 +1,5 @@
-package com.crafter.maker.generator;
+package com.crafter.maker.generator.file;
 
-import com.crafter.maker.model.MainTemplateConfig;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -12,18 +11,7 @@ import java.io.IOException;
 /**
  * 动态文件生成
  */
-public class DynamicGenerator {
-    public static void main(String[] args) throws TemplateException, IOException {
-        String projectPath = System.getProperty("user.dir");
-        String inputPath = projectPath + File.separator + "src/main/resources/templates/MainTemplate.java.ftl";
-        String outputPaht = projectPath + File.separator + "MainTemplate.java";
-        MainTemplateConfig mainTemplateConfig = new MainTemplateConfig();
-        mainTemplateConfig.setAuthor("Hangz");
-        // 不使用循环
-        mainTemplateConfig.setLoop(false);
-        mainTemplateConfig.setOutputText("求和结果：");
-        doGenerate(inputPath,outputPaht,mainTemplateConfig);
-    }
+public class DynamicFileGenerator {
 
     /**
      * 生成文件
