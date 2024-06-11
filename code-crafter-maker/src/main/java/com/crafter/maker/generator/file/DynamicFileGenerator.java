@@ -1,5 +1,6 @@
 package com.crafter.maker.generator.file;
 
+import cn.hutool.core.io.FileUtil;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;

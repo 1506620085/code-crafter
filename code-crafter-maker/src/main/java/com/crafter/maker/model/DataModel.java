@@ -3,7 +3,7 @@ package com.crafter.maker.model;
 import lombok.Data;
 
 /**
- * 动态模板配置
+ * 数据模型
  */
 @Data
 public class DataModel {
