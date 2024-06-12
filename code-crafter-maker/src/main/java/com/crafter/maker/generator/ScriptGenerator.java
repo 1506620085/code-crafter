@@ -39,4 +39,4 @@ public class ScriptGenerator {
         doGenerate(outputPath, "");
     }
 }
-}
+
