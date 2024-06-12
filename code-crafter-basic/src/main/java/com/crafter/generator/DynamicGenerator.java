@@ -1,5 +1,6 @@
 package com.crafter.generator;
 
+import cn.hutool.core.io.FileUtil;
 import com.crafter.model.MainTemplateConfig;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -48,6 +49,11 @@ public class DynamicGenerator {
         // 创建模板对象，加载指定模板
         String templateName = new File(inputPath).getName();
         Template template = configuration.getTemplate(templateName);
+
+        // 文件不存在则创建文件和父目录
+        if (!FileUtil.exist(outputPath)) {
+            FileUtil.touch(outputPath);
+        }
 
         // 生成
         FileWriter out = new FileWriter(outputPath);

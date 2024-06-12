@@ -6,13 +6,13 @@
   "author": "Hangz",
   "createTime": "2024-06-06",
   "fileConfig": {
-    "inputRootPath": "/Users/yupi/Code/yuzi-generator/yuzi-generator-demo-projects/acm-template-pro",
+    "inputRootPath": "D:/a_Programming_Tools/c_Code/c_Back_End/c_Study_Area/code-crafter/code-crafter-demo-projects/acm-template",
     "outputRootPath": "generated",
     "type": "dir",
     "files": [
       {
-        "inputPath": "src/com/yupi/acm/MainTemplate.java.ftl",
-        "outputPath": "src/com/yupi/acm/MainTemplate.java",
+        "inputPath": "src/com/crafter/acm/MainTemplate.java.ftl",
+        "outputPath": "src/com/crafter/acm/MainTemplate.java",
         "type": "file",
         "generateType": "dynamic"
       },

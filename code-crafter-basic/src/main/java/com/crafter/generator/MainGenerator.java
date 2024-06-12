@@ -17,14 +17,23 @@ public class MainGenerator {
     }
 
     public static void doGenerator(Object model) throws TemplateException, IOException {
-        String projectPath = System.getProperty("user.dir");
-        File parentFile  = new File(projectPath).getParentFile();
-        String inputPath = parentFile.getAbsolutePath() + File.separator + "code-crafter-demo-projects/acm-template";
-        String outputPath = projectPath;
-        StaticGenerator.copyFilesByRecursive(inputPath,outputPath);
-        // 生成动态文件
-        String inputDynamicFilePath = projectPath + File.separator + "src/main/resources/templates/MainTemplate.java.ftl";
-        String outputDynamicFilePath = outputPath + File.separator + "acm-template/src/com/crafter/acm/MainTemplate.java";
-        DynamicGenerator.doGenerate(inputDynamicFilePath,outputDynamicFilePath,model);
+        String inputRootPath = "D:\\a_Programming_Tools\\c_Code\\c_Back_End\\c_Study_Area\\code-crafter\\code-crafter-demo-projects\\acm-template";
+        String outputRootPath = "D:\\a_Programming_Tools\\c_Code\\c_Back_End\\c_Study_Area\\code-crafter\\acm-template";
+
+        String inputPath;
+        String outputPath;
+
+        inputPath = new File(inputRootPath, "src/com/crafter/acm/MainTemplate.java.ftl").getAbsolutePath();
+        outputPath = new File(outputRootPath, "src/com/crafter/acm/MainTemplate.java").getAbsolutePath();
+        DynamicGenerator.doGenerate(inputPath, outputPath,model);
+
+        inputPath = new File(inputRootPath, ".gitignore").getAbsolutePath();
+        outputPath = new File(outputRootPath, ".gitignore").getAbsolutePath();
+        StaticGenerator.copyFilesByHutool(inputPath, outputPath);
+
+        inputPath = new File(inputRootPath, "README.md").getAbsolutePath();
+        outputPath = new File(outputRootPath, "README.md").getAbsolutePath();
+        StaticGenerator.copyFilesByHutool(inputPath, outputPath);
+
     }
 }
