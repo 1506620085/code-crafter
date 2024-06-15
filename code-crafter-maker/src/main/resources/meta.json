@@ -6,9 +6,9 @@
   "author": "Hangz",
   "createTime": "2024-06-06",
   "fileConfig": {
-    "inputRootPath": "D:/a_Programming_Tools/c_Code/c_Back_End/c_Study_Area/code-crafter/code-crafter-demo-projects/acm-template",
-    "outputRootPath": "generated",
-    "sourceRootPath": ".source/acm-template-pro",
+    "inputRootPath": ".source/acm-template-pro",
+    "outputRootPath": "D:/a_Programming_Tools/c_Code/c_Back_End/c_Study_Area/code-crafter/acm-template-pro",
+    "sourceRootPath": "D:/a_Programming_Tools/c_Code/c_Back_End/c_Study_Area/code-crafter/code-crafter-demo-projects/acm-template-pro",
     "type": "dir",
     "files": [
       {
