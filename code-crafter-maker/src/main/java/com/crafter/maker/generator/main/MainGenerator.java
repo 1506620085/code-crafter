@@ -6,8 +6,8 @@ import cn.hutool.core.util.StrUtil;
 import com.crafter.maker.generator.JarGenerator;
 import com.crafter.maker.generator.ScriptGenerator;
 import com.crafter.maker.generator.file.DynamicFileGenerator;
-import com.crafter.meta.Meta;
-import com.crafter.meta.MetaManager;
+import com.crafter.maker.meta.Meta;
+import com.crafter.maker.meta.MetaManager;
 import freemarker.template.TemplateException;
 
 import java.io.File;

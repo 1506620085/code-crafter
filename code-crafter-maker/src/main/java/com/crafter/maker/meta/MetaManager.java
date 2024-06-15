@@ -1,4 +1,4 @@
-package com.crafter.meta;
+package com.crafter.maker.meta;
 
 import cn.hutool.core.io.resource.ResourceUtil;
 import cn.hutool.json.JSONUtil;

@@ -11,7 +11,7 @@ public class DataModel {
     /**
      * 是否生成循环
      */
-    private boolean loop = false;
+    private boolean loop;
 
     /**
      * 作者注释

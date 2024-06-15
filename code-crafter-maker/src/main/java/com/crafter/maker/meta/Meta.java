@@ -1,4 +1,4 @@
-package com.crafter.meta;
+package com.crafter.maker.meta;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -47,7 +47,7 @@ public class Meta {
             private String fieldName;
             private String type;
             private String description;
-            private String defaultValue;
+            private Object defaultValue;
             private String abbr;
         }
     }

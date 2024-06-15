@@ -21,7 +21,7 @@ public class GenerateCommand implements Callable<Integer> {
     public Integer call() throws Exception {
         DataModel dataModel = new DataModel();
         BeanUtil.copyProperties(this, dataModel);
-        MainGenerator.doGenerate(dataModel);
+        MainGenerator.doGenerator(dataModel);
         return 0;
     }
 }
