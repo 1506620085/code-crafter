@@ -4,6 +4,9 @@ import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.StrUtil;
+import com.crafter.maker.meta.enums.FileGenerateTypeEnum;
+import com.crafter.maker.meta.enums.FileTypeEnum;
+import com.crafter.maker.meta.enums.ModelTypeEnum;
 
 import java.io.File;
 import java.nio.file.Paths;
@@ -39,7 +42,7 @@ public class MetaValidator {
                     throw new MetaException("未填写 fieldName");
                 }
 
-                model.setType(StrUtil.blankToDefault(model.getType(), "String"));
+                model.setType(StrUtil.blankToDefault(model.getType(), ModelTypeEnum.STRING.getValue()));
             }
         }
     }
@@ -68,7 +71,7 @@ public class MetaValidator {
         String defaultOutputRootPath = "generated";
         fileConfig.setOutputRootPath(StrUtil.blankToDefault(outputRootPath, defaultOutputRootPath));
         String fileConfigType = fileConfig.getType();
-        String defaultType = "dir";
+        String defaultType = FileTypeEnum.DIR.getValue();
         fileConfig.setType(StrUtil.blankToDefault(fileConfigType, defaultType));
         // fileInfo 默认值
         List<Meta.FileConfigDTO.FilesDTO> files = fileConfig.getFiles();
@@ -86,12 +89,12 @@ public class MetaValidator {
                 String type = file.getType();
                 if (StrUtil.isBlank(type)) {
                     // 无文件后缀则为 dir（目录） 有文件后缀则为 file（文件）
-                    file.setType(StrUtil.isBlank(FileUtil.getSuffix(inputPath)) ? "dir" : "file");
+                    file.setType(StrUtil.isBlank(FileUtil.getSuffix(inputPath)) ? FileTypeEnum.DIR.getValue() : FileTypeEnum.FILE.getValue());
                 }
                 // generateType 如果文件结尾不为 Ftl，generateType 默认为 static，否则为 dynamic
                 String generateType = file.getGenerateType();
                 if (StrUtil.isBlank(generateType)) {
-                    file.setGenerateType(inputPath.endsWith(".ftl") ? "dynamic" : "static");
+                    file.setGenerateType(inputPath.endsWith(".ftl") ? FileGenerateTypeEnum.DYNAMIC.getValue() : FileGenerateTypeEnum.STATIC.getValue());
                 }
             }
         }
